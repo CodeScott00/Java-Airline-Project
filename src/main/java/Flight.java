@@ -6,10 +6,10 @@ public class Flight {
     private String destination;
     private String departureAirport;
     private String departureTime;
-    private int flightNumber;
+    private String flightNumber;
     private ArrayList<Passenger>passengersList;
 
-    public Flight(String name, String destination, String departureAirport, String departureTime, int flightNumber) {
+    public Flight(String name, String destination, String departureAirport, String departureTime, String flightNumber) {
         this.name = name;
         this.destination = destination;
         this.departureAirport = departureAirport;
@@ -33,11 +33,26 @@ public class Flight {
         return departureTime;
     }
 
-    public int getFlightNumber(){
+    public String getFlightNumber(){
         return flightNumber;
     }
 
     public int getPassengersList(){
         return passengersList.size();
     }
-}
+
+    public int getNumberOfSeats() {
+            return PlaneType.BOEING747.getCapacity();
+    }
+
+    public void addPassenger(Passenger passenger) {
+        this.passengersList.add(passenger);
+    }
+
+//    public void addPassengerToPassengersList(Passenger passenger) {
+//        if(this.passengersList <= PlaneType.BOEING747.getCapacity() ) {
+//            this.passengersList.add(passenger);
+//        }
+
+    }
+
