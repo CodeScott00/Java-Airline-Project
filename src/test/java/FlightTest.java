@@ -63,11 +63,20 @@ public class FlightTest {
     }
 
     @Test
-    public void canRemoveCapacityFrom747(){
-        if(flight.getPassengersList() <= PlaneType.BOEING707.getCapacity()){
-            PlaneType.BOEING747.getCapacity() -= flight.getPassengersList();
+    public void canAddPassengerAndCheckCapacity(){
+        flight.addPassenger(passenger);
+        if(flight.getPassengersList() <= PlaneType.BOEING747.getCapacity()){
+
         }
     }
+
+//
+//    @Test
+//    public void canRemoveCapacityFrom747(){
+//        if(flight.getPassengersList() <= PlaneType.BOEING707.getCapacity()){
+//            PlaneType.BOEING747.getCapacity() -= flight.getPassengersList();
+//        }
+//    }
 
 //    @Test
 //    public void checkNumberOfSeatsRemainingMinus2(){
